@@ -1,0 +1,71 @@
+#selection_bar{
+    background-color: #0B2447;
+}
+
+#logo{
+    background-color: #0B2447;
+}
+
+.menu_font{
+    font-family: 'Lobster', cursive;
+    font-size: 22pt;
+}
+
+body{
+    background-color: #576CBC;
+}
+
+#about{
+    background-color: #0B2447;
+    font-family: 'Recursive', sans-serif;
+    font-size: 16pt;
+    font-size: 2.5vh;
+    color: white;
+}
+
+
+#info_cards{
+    background-color: #0B2447;
+}
+
+.card-text{
+    font-family: 'Recursive', sans-serif;
+    color: #0d0b0a;
+    font-weight: bolder;
+}
+
+.card-title{
+    font-family: 'Recursive', sans-serif;
+    color:#0B2447;
+}
+
+.the_card_body{
+    background-color: #576CBC;
+}
+
+
+
+.footer_text{
+    color: #A5D7E8;
+    font-family: 'Recursive', sans-serif;
+}
+
+.menu_body {
+    background-color: #19376D; 
+    height: 75pt; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu_form {
+    display: flex;
+  }
+  
+  .menu_search {
+    width: 150pt;
+    margin-right: 10px; 
+  }
+
+
+/* https://colorhunt.co/palette/0b244719376d576cbca5d7e8 */

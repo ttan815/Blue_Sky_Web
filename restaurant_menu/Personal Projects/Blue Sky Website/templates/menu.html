@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+<head>
+    {% block title %}
+    <title>Menu</title>
+    {% endblock %}
+</head>
+{% block content%}
+<div class="container-fluid menu_body" style="margin-bottom: 15px;">
+    <form action="{{url_for('menu')}}" method="POST" class="menu_form">
+        <input name="item_searched" class="form-control menu_search" placeholder="Search Menu">
+        <button type="submit" class="btn btn-primary menu_button">Confirm</button>
+    </form>
+</div>
+
+
+
+<div class="d-flex justify-content-center" style="background-color: #19376D; margin: 0; padding: 0;">
+    <div class="d-flex flex-wrap justify-content-center row" style="align-content: center;">
+        {% if appetizer|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+            <h1>APPETIZERS</h1>
+        </div>
+        {% endif %}
+        {% for i in range(0, appetizer|length)%}
+        <div class="card" style="width: 18rem; margin: 15px;">
+            <img class="card-img-top" src="..." alt="">
+            <div class="card-body">
+              <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{appetizer[i][0]}}</h5>
+              <p class="card-text card-text justify-content-center d-flex flex-wrap">{{appetizer[i][1]['Spicy']}}</p>
+              <p class="card-text card-text justify-content-center d-flex flex-wrap">Count Pieces: {{appetizer[i][2]['Count']}}</p>
+            </div>
+          </div>
+        {% endfor %}
+
+        {% if soup|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>SOUPS</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, soup|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap ">{{soup[i][0]}}</h5>
+                    <p class="card-text card-text justify-content-center d-flex flex-wrap">{{soup[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if pork|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>PORK</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, pork|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{pork[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{pork[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if house_special|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>HOUSE SPECIAL</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, house_special|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{house_special[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{house_special[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if poultry|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>POULTRY</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, poultry|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{poultry[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{poultry[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if sizzling_plates|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>SIZZLING PLATES</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, sizzling_plates|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{sizzling_plates[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{sizzling_plates[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if beef|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>BEEF</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, beef|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{beef[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{beef[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if vege_tofu|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>VEGETABLE / TOFU</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, vege_tofu|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{vege_tofu[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{vege_tofu[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if seafood|length >= 1 %}
+        <div class="d-flex flex-wrap justify-content-center">
+        <h1>SEAFOOD</h1>
+        </div>
+        {% endif %} 
+        <div class="d-flex flex-wrap justify-content-center row">
+            {% for i in range(0, seafood|length)%}
+            <div class="card" style="width: 18rem; margin: 15px;">
+                <img class="card-img-top" src="..." alt="">
+                <div class="card-body">
+                    <h5 class="card-title card-text justify-content-center d-flex flex-wrap">{{seafood[i][0]}}</h5>
+                    <p class="card-text justify-content-center d-flex flex-wrap">{{seafood[i][1]['Spicy']}}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>   
+
+</div>
+{% endblock %}

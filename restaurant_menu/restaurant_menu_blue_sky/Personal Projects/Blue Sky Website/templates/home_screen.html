@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+<head>
+{% block title %}
+<title>Blue Sky Chinese Restaurant - Carmichael</title>
+{% endblock %}
+</head>
+<body>
+    {% block content %}
+  <div class="container-fluid line_break_div" style="background-color: #19376D; height: 5px; padding-left: 0; padding-right: 0;"></div>
+
+  <div class="container-fluid d-flex flex-column justify-content-center">
+      <div class="row">
+          <div class="col-12 d-flex flex-column" id="logo">
+              <div class="d-flex justify-content-center align-items-center">
+                  <a href="{{url_for('home')}}"><img src="../static/blue_sky_icon.png" style="height: 38pt; margin: 10pt;"><br></a>
+              </div>
+              <div class="container-fluid">
+                  <div class="row"></div>
+                  <p style="font-family: 'Lobster', cursive; color: white; font-size: 26pt;" class="col-12 d-flex justify-content-center">Chinese Restaurant</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid" style="background-color: #19376D; height: 5px; padding-left: 0; padding-right: 0;"></div>
+
+
+  <div class="container-fluid d-flex justify-content-center" id="info_cards">
+    <div class="row justify-content-center">
+        <div class="card col-4 the_card_body" style="width: 23rem; margin: 15px;">
+            <div class="card-body">
+              <h5 class="card-title">Operating Hours</h5>
+              <p class="card-text">
+                Monday: 4 pm - 9 pm<br>
+                Tuesday - Thursday: 11:30 am - 9 pm <br>
+                Friday - Saturday: 11:30 am - 9:30 pm <br>
+                Sunday: 4 pm - 9 pm
+            </p>
+            </div>
+        </div>
+
+        <div class="card col-4 the_card_body" style="width: 23rem; margin: 15px">
+            <div class="card-body">
+              <h5 class="card-title">Address</h5>
+              <p class="card-text">
+                7323 Fair Oaks Blvd <br>
+                Carmichael, CA 95608 <br>
+                Sutter Village Shopping Center <br>
+                Fair Oaks Blvd. & Sutter Avenue Intersection
+              </p>
+            </div>
+        </div>
+        
+        <div class="card col-4 the_card_body" style="width: 23rem; margin: 15px">
+            <div class="card-body">
+              <h5 class="card-title">Order</h5>
+              <p class="card-text">
+                Telephone: (916) - 485 - 5311<br>
+                Fax: (916) - 485 - 8188</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid line_break_div" style="background-color: #19376D; height: 5px;"></div>
+
+{% endblock %}
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>

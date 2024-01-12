@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+<head>
+    {% block title %}
+    <title>Searching Menu</title>
+    {% endblock %}
+</head>
+{% block content%}
+<div class="container-fluid menu_body">
+    <form action="/menu" method="['POST']" class="menu_form">
+        <input class="form-control menu_search" placeholder="Search Menu">
+        <button type="submit" class="btn btn-primary menu_button">Confirm</button>
+    </form>
+</div>
+{% endblock %}
